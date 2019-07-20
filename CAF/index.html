@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="lib/grid/simple-grid.css">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+  <title>CAF?</title>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117780851-1"></script>
+  <!-- jQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Animation de la cup -->
+  <script>
+    $(document).mousemove(function(e){
+      $("#cup").css({left:e.clientX - 35, top:e.clientY - 35});
+    });
+
+    $(document).ready(function(){
+      $("#logo").click(function(){
+          var bgCol =  $("html").css("background-color");
+          var color_caf001 = "#ffef00";
+          var color_caf004 = "rgb(238, 30, 38)";
+
+          if(bgCol == color_caf004){
+            $("html").css("background-color",color_caf001);
+          }else{
+            $("html").css("background-color",color_caf004);
+          }
+      });
+    });
+
+
+  </script>
+</head>
+<body>
+  <div id="cursor"></div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <br>
+        <img id="logo" src="img/logo.png"></img>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3 release">
+        <h2>RELEASES</h2>
+        <a href="https://unpetitcaf.bandcamp.com/album/001caf-ir-nonante" target="_blank">001 CAF? - IR Nonante</a></br>
+        <a href="https://unpetitcaf.bandcamp.com/album/002caf-cabane-8" target="_blank">002 CAF? - Cabane 8</a><br>
+        <a href="https://unpetitcaf.bandcamp.com/album/004caf-r58" target="_blank">004 CAF? - R58</a></br>
+      </div>
+
+      <div class="col-6 teuf">
+        <h2>PARTY</h2>
+        20.06.2019 DNH & CAF? <br>
+        05.11.2019 CAF003 au RKC <br>
+        04.04.2019 BRKN & CAF? au Mouton Noir <br>
+      </div>
+
+      <div class="col-3 infos">
+        <h2>INFOS</h2>
+        <a class="link" href="https://unpetitcaf.bandcamp.com/">Bandcamp</a><br>
+        <a class="link" href="https://soundcloud.com/caf_rec">Soundcloud</a><br>
+        <a class="link" href="https://www.instagram.com/unptit.cafe/" target="_blank">Instagram</a><br>
+        <a class="link" href="mailto:caf4rec@gmail.com" target="_blank">Contact</a>
+      </div>
+  </div>
+
+<img id="cup" src="img/cup.gif"></img>
+
+<body>
+</html>
